@@ -31,6 +31,9 @@ header button {
   padding: 3em;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
   background-position: center;
   background-size: auto 90%;
@@ -38,7 +41,7 @@ header button {
 }
 
 .headline h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   text-align: center;
 }
@@ -54,7 +57,19 @@ header button {
 }
 
 .headline p {
-  margin-top: 2em;
+  margin-top: 3em;
+  line-height: 1.5em;
   text-align: center;
   color: #172B4D;
+}
+
+.headline div {
+  width: 100%;
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.headline div a {
+  margin: .5em;
 }
