@@ -1,0 +1,23 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  padding: 1em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+header h2 {
+  font-weight: 600;
+  color: #28352F;
+}
+
+header button {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  background-image: url(images/icons/hamburger.svg);
+  border: none;
+}
