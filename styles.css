@@ -3,6 +3,7 @@ body {
 }
 
 header {
+  width: 100%;
   padding: 1em;
   height: 2em;
   display: flex;
@@ -12,6 +13,7 @@ header {
 header h2 {
   font-weight: 600;
   color: #28352F;
+  flex-grow: 1;
 }
 
 header button {
@@ -19,5 +21,6 @@ header button {
   height: 2em;
   background-color: transparent;
   background-image: url(images/icons/hamburger.svg);
+  background-repeat: no-repeat;
   border: none;
 }
