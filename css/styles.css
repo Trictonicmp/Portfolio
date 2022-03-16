@@ -12,7 +12,7 @@ header {
 
 header h2 {
   font-weight: 600;
-  color: #28352F;
+  color: #28352f;
   flex-grow: 1;
 }
 
@@ -46,21 +46,19 @@ header button {
   text-align: center;
 }
 
-.headline h1:nth-child(1)
-{
-  color: #172B4D;
+.headline h1:nth-child(1) {
+  color: #172b4d;
 }
 
-.headline h1:nth-child(2)
-{
-  color: #36B37E;
+.headline h1:nth-child(2) {
+  color: #36b37e;
 }
 
 .headline p {
   margin-top: 3em;
   line-height: 1.5em;
   text-align: center;
-  color: #172B4D;
+  color: #172b4d;
 }
 
 .headline div {
@@ -70,6 +68,6 @@ header button {
   justify-content: center;
 }
 
-.headline div a {
-  margin: .5em;
+.headline div img {
+  margin: 0.5em;
 }
