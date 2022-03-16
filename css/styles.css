@@ -16,7 +16,7 @@ header h2 {
   flex-grow: 1;
 }
 
-header button {
+header a {
   width: 2em;
   height: 2em;
   background-color: transparent;
