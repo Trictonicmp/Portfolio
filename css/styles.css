@@ -25,3 +25,36 @@ header button {
   background-position: center;
   border: none;
 }
+
+.headline {
+  height: 100vh;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/header-illsutration-mobile.svg);
+  background-position: center;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+}
+
+.headline h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.headline h1:nth-child(1)
+{
+  color: #172B4D;
+}
+
+.headline h1:nth-child(2)
+{
+  color: #36B37E;
+}
+
+.headline p {
+  margin-top: 2em;
+  text-align: center;
+  color: #172B4D;
+}
