@@ -12,11 +12,15 @@ header {
 
 header h2 {
   font-weight: 600;
-  color: #28352f;
   flex-grow: 1;
 }
 
-header a {
+header h2 a {
+  text-decoration: none;
+  color: #28352f;
+}
+
+header .menu-button {
   width: 2em;
   height: 2em;
   background-color: transparent;
