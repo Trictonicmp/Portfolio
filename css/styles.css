@@ -79,7 +79,7 @@ header .menu-button {
   flex-direction: column;
 }
 
-.recent-work-headline {
+.section-headline {
   padding: 0 1em;
   font-size: 2.5em;
   text-align: center;
@@ -87,7 +87,7 @@ header .menu-button {
   color: #172b4d;
 }
 
-.recent-work-headline::after {
+.recent-work .section-headline::after {
   display: block;
   margin: 0.5em auto;
   content: "";
@@ -176,4 +176,13 @@ header .menu-button {
 
 .work-card-info .green-button:active {
   background-color: #008552;
+}
+
+.about-me {
+  width: 100%;
+  padding: 4em 0 0 0;
+}
+
+.about-me-headline {
+
 }
