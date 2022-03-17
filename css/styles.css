@@ -75,19 +75,19 @@ header .menu-button {
 
 .recent-work {
   width: 100%;
-  padding: 0 3em;
   display: flex;
   flex-direction: column;
 }
 
-.recent-work .recent-work-headline {
+.recent-work-headline {
+  padding: 0 1em;
   font-size: 2.5em;
   text-align: center;
   font-weight: bold;
   color: #172b4d;
 }
 
-.recent-work .recent-work-headline::after {
+.recent-work-headline::after {
   display: block;
   margin: 0.5em auto;
   content: "";
@@ -95,4 +95,81 @@ header .menu-button {
   height: 0.1em;
   background-color: #36b37e;
   border-radius: 0.25em;
+}
+
+.work-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+  justify-content: center;
+  grid-gap: 1em;
+  width: 100%;
+  padding: 0 1.5em;
+}
+
+.work-card {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 55% 45%;
+  background-color: #Ebf0ee;
+  border: 1px solid #d0d9d4;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.work-card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  background-color: white;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.work-card-info h3 {
+  padding: 0 1em;
+  font-weight: 600;
+  color: #3a4a42;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.work-card-info ul {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.work-card-info ul li {
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.8em 1em;
+  background-color: #ebf0ee;
+  color: #3a4a42;
+  border-radius: 0.3em;
+}
+
+.work-card-info button {
+  margin: 0 auto 2em auto;
+  max-width: 7em;
+  padding: 0.8em;
+  font-weight: medium;
+  font-size: 1em;
+  color: white;
+  border: none;
+  background-color: #36b37F;
+  border-radius: 0.2em;
+}
+
+.work-card-info button:hover {
+  cursor: pointer;
+  background-color: #36b37f;
+}
+
+.work-card-info button:active {
+  background-color: #008552;
 }
