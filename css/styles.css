@@ -32,15 +32,15 @@ header .menu-button {
 
 .headline {
   height: 100vh;
-  padding: 3em;
+  padding: 0 3em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
-  background-position: center;
-  background-size: auto 90%;
+  background-position: center 1em;
+  background-size: auto 84%;
   background-repeat: no-repeat;
 }
 
