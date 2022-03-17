@@ -32,12 +32,11 @@ header .menu-button {
 
 .headline {
   height: 100vh;
-  padding: 0 3em;
+  padding: 5em 3em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
   background-position: center 1em;
   background-size: 100% auto;
@@ -64,13 +63,13 @@ header .menu-button {
   color: #172b4d;
 }
 
-.headline div {
+.headline ul {
   width: 100%;
   margin-top: 3em;
   display: flex;
   justify-content: center;
 }
 
-.headline div img {
+.headline ul img {
   margin: 0.5em;
 }
