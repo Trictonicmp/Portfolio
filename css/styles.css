@@ -153,25 +153,27 @@ header .menu-button {
   border-radius: 0.3em;
 }
 
-.work-card-info a {
-  margin: 0.5em auto 2em auto;
-  max-width: 8em;
+.green-button {
   padding: 0.8em;
   font-weight: medium;
   font-size: 1em;
-  text-decoration: none;
-  text-align: center;
   color: white;
+  text-decoration: none;
   border: none;
   background-color: #36b37F;
   border-radius: 0.2em;
 }
 
-.work-card-info a:hover {
+.work-card-info .green-button {
+  margin: 0.8em auto 2em auto;
+  max-width: 8em;
+}
+
+.work-card-info .green-button:hover {
   cursor: pointer;
   background-color: #36b37f;
 }
 
-.work-card-info a:active {
+.work-card-info .green-button:active {
   background-color: #008552;
 }
