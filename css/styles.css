@@ -40,7 +40,7 @@ header .menu-button {
   justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
   background-position: center 1em;
-  background-size: auto 84%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
