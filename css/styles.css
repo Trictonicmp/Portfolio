@@ -48,13 +48,12 @@ header .menu-button {
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
-}
-
-.headline h1:nth-child(1) {
   color: #172b4d;
 }
 
-.headline h1:nth-child(2) {
+
+.headline span {
+  display: block;
   color: #36b37e;
 }
 
