@@ -6,19 +6,16 @@ header {
   width: 100%;
   padding: 1.5em;
   height: 2em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header h2 {
   font-weight: 600;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+flex-grow: 1;
 }
 
 header h2 a {
@@ -39,18 +36,14 @@ header .menu-button {
 .headline {
   height: calc(100vh - 4em);
   padding: 5em 3em 0 3em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
   background-image: url(../images/header-illsutration-mobile.svg);
   background-position: center 1em;
   background-size: 100% auto;
@@ -83,12 +76,10 @@ header .menu-button {
 .headline ul {
   width: 100%;
   margin-top: 3em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .headline ul img {
@@ -97,13 +88,10 @@ header .menu-button {
 
 .recent-work-section {
   width: 100%;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .section-headline {
@@ -127,10 +115,10 @@ header .menu-button {
 .work-cards-container {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: repeat(auto-fit, minmax(320px, 350px));
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
   padding: 0 1.5em;
@@ -153,13 +141,10 @@ header .menu-button {
 }
 
 .work-card-info {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0.5em;
   background-color: white;
   border-top-left-radius: 0.5em;
@@ -176,12 +161,10 @@ header .menu-button {
 
 .work-card-info ul {
   margin: 1em 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -221,25 +204,19 @@ header .menu-button {
 
 .about-me-section {
   margin-top: 3em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
 .about-me-header {
   padding-top: 3em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-image: url(../images/illustration-1-about-me-mobile.svg), url(../images/illustration-2-about-me-mobile.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
@@ -259,10 +236,10 @@ header .menu-button {
   margin-top: 3em;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: repeat(auto-fit, minmax(320px, 350px));
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
   padding: 0 1.5em;
@@ -271,37 +248,29 @@ header .menu-button {
 .knowledge-card {
   width: 100%;
   padding: 2.5em 1em 0 1em;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ebf0ee;
   border: 1px solid #c1c7d0;
   border-radius: 0.5em;
 }
 
 .knowledge-icon-container {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: white;
   width: 4.5em;
   height: 4.5em;
   border-radius: 2.25em;
-  -webkit-box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
 }
 
 .knowledge-icon-container img {
@@ -320,16 +289,14 @@ header .menu-button {
   width: 100%;
   min-height: 5em;
   margin: 1em 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: justify;
-      align-content: space-between;
+  align-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .knowledge-card ul li {
