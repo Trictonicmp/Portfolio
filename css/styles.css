@@ -6,7 +6,6 @@ header {
   width: 100%;
   padding: 1.5em;
   height: 2em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
@@ -15,7 +14,7 @@ header {
 header h2 {
   font-weight: 600;
   -ms-flex-positive: 1;
-flex-grow: 1;
+  flex-grow: 1;
 }
 
 header h2 a {
@@ -36,7 +35,6 @@ header .menu-button {
 .headline {
   height: calc(100vh - 4em);
   padding: 5em 3em 0 3em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -76,10 +74,17 @@ header .menu-button {
 .headline ul {
   width: 100%;
   margin-top: 3em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.knowledge-icon-container img {
+  width: 2.8em;
 }
 
 .headline ul img {
@@ -88,7 +93,6 @@ header .menu-button {
 
 .recent-work-section {
   width: 100%;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -115,7 +119,7 @@ header .menu-button {
 .work-cards-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat(auto-fit, minmax(320px, 350px));
+  -ms-grid-columns: 320px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
   -ms-flex-pack: center;
   justify-content: center;
@@ -130,18 +134,13 @@ header .menu-button {
   display: grid;
   -ms-grid-rows: 55% 45%;
   grid-template-rows: 55% 45%;
-  background-color: #Ebf0ee;
+  background-color: #ebf0ee;
   border: 1px solid #d0d9d4;
   border-radius: 0.5em;
   overflow: hidden;
 }
 
-.work-card img {
-  width: 100%;
-}
-
 .work-card-info {
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -161,7 +160,6 @@ header .menu-button {
 
 .work-card-info ul {
   margin: 1em 0;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -179,12 +177,11 @@ header .menu-button {
 
 .green-button {
   padding: 0.8em;
-  font-weight: medium;
   font-size: 1em;
   color: white;
   text-decoration: none;
   border: none;
-  background-color: #36b37F;
+  background-color: #36b37f;
   border-radius: 0.2em;
 }
 
@@ -204,7 +201,6 @@ header .menu-button {
 
 .about-me-section {
   margin-top: 3em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -213,7 +209,6 @@ header .menu-button {
 
 .about-me-header {
   padding-top: 3em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -229,7 +224,7 @@ header .menu-button {
 
 .about-me-section .green-button {
   max-width: 10em;
-  margin:  2em auto 0 auto;
+  margin: 2em auto 0 auto;
 }
 
 .about-me-cards-container {
@@ -248,7 +243,6 @@ header .menu-button {
 .knowledge-card {
   width: 100%;
   padding: 2.5em 1em 0 1em;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -260,7 +254,6 @@ header .menu-button {
 }
 
 .knowledge-icon-container {
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
@@ -271,10 +264,6 @@ header .menu-button {
   height: 4.5em;
   border-radius: 2.25em;
   box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
-}
-
-.knowledge-icon-container img {
-  width: 2.8em;
 }
 
 .knowledge-card h3 {
@@ -289,7 +278,6 @@ header .menu-button {
   width: 100%;
   min-height: 5em;
   margin: 1em 0;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: justify;
   align-content: space-between;
