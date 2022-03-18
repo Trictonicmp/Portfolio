@@ -119,7 +119,7 @@ header .menu-button {
 .work-cards-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 320px;
+  -ms-grid-columns: repeat(auto-fit, minmax(320px, 350px));
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
   -ms-flex-pack: center;
   justify-content: center;
