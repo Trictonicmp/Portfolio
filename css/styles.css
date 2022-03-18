@@ -182,10 +182,16 @@ header .menu-button {
 }
 
 .about-me-section {
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 3em 0 0 0;
+}
+
+.about-me-header {
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
   background-image: url(../images/illustration-1-about-me-mobile.svg), url(../images/illustration-2-about-me-mobile.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
@@ -199,4 +205,14 @@ header .menu-button {
 .about-me-section .green-button {
   max-width: 10em;
   margin:  2em auto 0 auto;
+}
+
+.about-me-cards-container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+  justify-content: center;
+  grid-gap: 1em;
+  width: 100%;
+  padding: 0 1.5em;
 }
