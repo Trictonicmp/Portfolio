@@ -56,6 +56,7 @@ header .menu-button {
 }
 
 .paragraph-text {
+  font-size: 1.2em;
   line-height: 1.5em;
   text-align: center;
   color: #172b4d;
@@ -104,7 +105,7 @@ header .menu-button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
   justify-content: center;
-  grid-gap: 1em;
+  grid-gap: 1.5em;
   width: 100%;
   padding: 0 1.5em;
 }
@@ -212,7 +213,61 @@ header .menu-button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
   justify-content: center;
-  grid-gap: 1em;
+  grid-gap: 1.5em;
   width: 100%;
   padding: 0 1.5em;
+}
+
+.knowledge-card {
+  width: 100%;
+  padding: 2.5em 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ebf0ee;
+  border: 1px solid #c1c7d0;
+  border-radius: 0.5em;
+}
+
+.knowledge-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 2.25em;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+}
+
+.knowledge-icon-container img {
+  width: 2.8em;
+}
+
+.knowledge-card h3 {
+  margin-top: 3em;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  color: #344563;
+}
+
+.knowledge-card ul {
+  width: 100%;
+  min-height: 5em;
+  margin: 1em 0;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.knowledge-card ul li {
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.8em 1em;
+  margin: 0 0.3em;
+  background-color: white;
+  color: #36b37e;
+  border-radius: 0.5em;
 }
