@@ -32,7 +32,6 @@ header .menu-button {
 }
 
 .headline {
-  height: calc(100vh - 4em);
   padding: 5em 3em 0 3em;
   display: flex;
   flex-direction: column;
@@ -87,6 +86,7 @@ header .menu-button {
 }
 
 .recent-work-section {
+  margin-top: 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -111,9 +111,8 @@ header .menu-button {
 }
 
 .work-cards-container {
-  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
@@ -122,7 +121,6 @@ header .menu-button {
 
 .work-card {
   width: 100%;
-  display: -ms-grid;
   display: flex;
   flex-direction: column;
   background-color: #ebf0ee;
@@ -156,7 +154,7 @@ header .menu-button {
 }
 
 .work-card-info ul li {
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 600;
   padding: 0.8em 1em;
   background-color: #ebf0ee;
@@ -185,7 +183,7 @@ header .menu-button {
 }
 
 .work-card-info .green-button {
-  margin: 0.8em auto 2em auto;
+  margin: 0.8em auto 1em auto;
   max-width: 8em;
 }
 
@@ -218,7 +216,7 @@ header .menu-button {
 .about-me-cards-container {
   margin-top: 3em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
