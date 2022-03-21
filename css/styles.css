@@ -273,3 +273,7 @@ header .menu-button {
   color: #36b37e;
   border-radius: 0.5em;
 }
+
+#capybara {
+  margin-left: calc(50% - 8em);
+}
