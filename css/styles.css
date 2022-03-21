@@ -257,13 +257,14 @@ header .menu-button {
   width: 100%;
   min-height: 5em;
   margin: 1em 0;
-  display: flex;
+  /* display: flex; */
   align-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .knowledge-card ul li {
+  float: left;
   font-size: 0.8em;
   font-weight: 600;
   padding: 0.8em 1em;
