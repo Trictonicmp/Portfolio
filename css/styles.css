@@ -282,6 +282,9 @@ header .menu-button {
   flex-direction: column;
   margin-top: 4em;
   align-items: center;
+  background-image: url(../images/illustration-contact-form.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 .contact-section h3 {
@@ -301,15 +304,19 @@ header .menu-button {
   padding: 1em;
   border: 1px solid #d0d9d4;
   border-radius: 0.2em;
+  font-size: 0.9em;
 }
 
-.contact-section form input,textarea active {
-  border: 1 px solid #60c095;
+.contact-section form input:focus, textarea:focus {
+  border: 1px solid #60c095;
 }
 
 .contact-section form textarea {
   min-height: 114px;
-  font-family: 'Inter', sans-serif;;
+  font-family: 'Inter', sans-serif;
+  background-image: url(../images/icons/textarea-resize.svg);
+  background-position: calc(100% - 0.4em) calc(100% - 0.4em);
+  background-repeat: no-repeat;
 }
 
 .contact-section form button {
