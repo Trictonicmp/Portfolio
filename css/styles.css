@@ -326,3 +326,10 @@ header .menu-button {
 .contact-section .social-media-iconlist {
   margin-top: 1.5em;
 }
+
+.dev-email {
+  margin: 1em;
+  text-align: center;
+  font-size: 1.2em;
+  color: #42526e;
+}
