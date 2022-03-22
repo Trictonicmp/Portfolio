@@ -150,7 +150,7 @@ header .menu-button {
   margin: 1em 0;
   display: flex;
   gap: 0.4em;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
