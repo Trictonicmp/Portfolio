@@ -299,15 +299,17 @@ header .menu-button {
   width: 100%;
 }
 
-.contact-section form input,textarea {
-  width: calc(100% - 4em); 
+.contact-section form input,
+textarea {
+  width: calc(100% - 4em);
   padding: 1em;
   border: 1px solid #d0d9d4;
   border-radius: 0.2em;
   font-size: 0.9em;
 }
 
-.contact-section form input:focus, textarea:focus {
+.contact-section form input:focus,
+textarea:focus {
   border: 1px solid #60c095;
 }
 
