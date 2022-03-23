@@ -64,6 +64,7 @@ header .menu-button {
 
 .headline .paragraph-text {
   margin-top: 3em;
+  max-width: 70ch;
 }
 
 .headline ul {
@@ -271,4 +272,9 @@ header .menu-button {
   background-color: white;
   color: #36b37e;
   border-radius: 0.5em;
+}
+
+/*MEDIA QUERIES */
+@media (min-width: 768px) {
+
 }
