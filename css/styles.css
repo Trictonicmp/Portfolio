@@ -1,5 +1,6 @@
-html {
+body {
   font-family: 'Inter', sans-serif;
+  margin: 0 auto;
 }
 
 header {
@@ -140,6 +141,8 @@ header ul {
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 0 1.5em;
 }
 
@@ -229,8 +232,10 @@ header ul {
 }
 
 .about-me-section .paragraph-text {
-  margin-top: 1.5em;
+  margin: 1.5em auto 0 auto;
   padding: 0 2em;
+  max-width: 65ch;
+  color: #42526e;
 }
 
 .about-me-section .green-button {
@@ -239,12 +244,13 @@ header ul {
 }
 
 .about-me-cards-container {
-  margin-top: 3em;
+  margin: 3em auto 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
+  max-width: 1300px;
   padding: 0 1.5em;
 }
 
@@ -301,7 +307,8 @@ header ul {
 .contact-section {
   display: flex;
   flex-direction: column;
-  margin-top: 4em;
+  flex-wrap: wrap;
+  margin: 4em auto 0 auto;
   align-items: center;
   background-image: url(../images/illustration-contact-form.svg);
   background-position: right bottom;
@@ -321,7 +328,7 @@ header ul {
 }
 
 .contact-section form input,
-textarea {
+.contact-section form textarea {
   width: calc(100% - 4em);
   padding: 1em;
   border: 1px solid #d0d9d4;
@@ -330,7 +337,7 @@ textarea {
 }
 
 .contact-section form input:focus,
-textarea:focus {
+.contact-section form textarea:focus {
   border: 1px solid #60c095;
 }
 
@@ -350,6 +357,10 @@ textarea:focus {
   margin-top: 1.5em;
 }
 
+footer .social-media-iconlist {
+  display: none;
+}
+
 .dev-email {
   margin: 1em;
   text-align: center;
@@ -361,11 +372,12 @@ textarea:focus {
 @media (min-width: 768px) {
   header {
     position: fixed;
+    left: 0;
     padding: 2em;
   }
 
   header .menu-button,
-  h2 {
+  header h2 {
     display: none;
   }
 
@@ -395,5 +407,61 @@ textarea:focus {
 
   .headline-section .paragraph-text {
     margin-top: 1em;
+  }
+
+  .about-me-header {
+    padding-top: 5em;
+    margin-top: 3em;
+    background-image: url(../images/illustration-about-me-1-desktop.svg), url(../images/illustration-about-me-2-desktop.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .contact-section {
+    flex-direction: row;
+    background-image: none;
+    background-image: url(../images/form-illustration-desktop.svg);
+    background-size: 100%;
+    padding-bottom: 15em;
+  }
+
+  .contact-section .form-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 73em;
+    gap: 1em;
+  }
+
+  .contact-section .form-container .section-headline {
+    flex: 1 1 40%;
+    font-size: 2em;
+    padding: 0 0 0 1em;
+    line-height: 1.5em;
+  }
+
+  .contact-section form {
+    flex: 1 1 60%;
+    align-items: initial;
+  }
+
+  .contact-section form input,
+  .contact-section form textarea {
+    width: calc(100% - 2.2em);
+  }
+
+  .contact-section .social-media-iconlist,
+  .contact-section .dev-email {
+    display: none;
+  }
+
+  .dev-email {
+    display: none;
+  }
+
+  footer .social-media-iconlist {
+    padding: 1em;
+    display: flex;
+    border-top: 1px solid #dfe1e6;
   }
 }
