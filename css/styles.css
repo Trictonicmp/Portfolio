@@ -80,6 +80,10 @@ header ul {
   justify-content: center;
 }
 
+footer .social-media-iconlist {
+  display: none;
+}
+
 .headline-section .social-media-iconlist {
   margin-top: 3em;
 }
@@ -336,11 +340,6 @@ header ul {
   font-size: 0.9em;
 }
 
-.contact-section form input:focus,
-.contact-section form textarea:focus {
-  border: 1px solid #60c095;
-}
-
 .contact-section form textarea {
   min-height: 114px;
   font-family: 'Inter', sans-serif;
@@ -357,10 +356,6 @@ header ul {
   margin-top: 1.5em;
 }
 
-footer .social-media-iconlist {
-  display: none;
-}
-
 .dev-email {
   margin: 1em;
   text-align: center;
@@ -368,7 +363,7 @@ footer .social-media-iconlist {
   color: #42526e;
 }
 
-/*MEDIA QUERIES */
+/* MEDIA QUERIES */
 @media (min-width: 768px) {
   header {
     position: fixed;
@@ -450,12 +445,7 @@ footer .social-media-iconlist {
     width: calc(100% - 2.2em);
   }
 
-  .contact-section .social-media-iconlist,
-  .contact-section .dev-email {
-    display: none;
-  }
-
-  .dev-email {
+  footer .dev-email {
     display: none;
   }
 
@@ -464,4 +454,15 @@ footer .social-media-iconlist {
     display: flex;
     border-top: 1px solid #dfe1e6;
   }
+
+  .contact-section .social-media-iconlist,
+  .contact-section .dev-email {
+    display: none;
+  }
+}
+
+/* Pseudo selectors */
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+  border: 1px solid #60c095;
 }
