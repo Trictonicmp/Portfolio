@@ -95,6 +95,20 @@ header .menu-button {
   flex-direction: column;
 }
 
+.keep-reading-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.25em;
+}
+
+.keep-reading-button img {
+  width: 65%;
+}
+
 .section-headline {
   padding: 0 1em;
   font-size: 2.5em;
