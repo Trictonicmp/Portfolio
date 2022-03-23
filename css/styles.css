@@ -4,6 +4,8 @@ html {
 
 header {
   width: 100%;
+  position: sticky;
+  top: 0;
   padding: 1.5em;
   height: 2em;
   display: flex;
@@ -31,6 +33,10 @@ header .menu-button {
   border: none;
 }
 
+header ul {
+  display: none;
+}
+
 .headline-section {
   padding: 5em 3em 0 3em;
   display: flex;
@@ -38,7 +44,7 @@ header .menu-button {
   flex-wrap: wrap;
   align-items: center;
   background-image: url(../images/header-illsutration-mobile.svg);
-  background-position: center 1em;
+  background-position: center top;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -349,4 +355,45 @@ textarea:focus {
   text-align: center;
   font-size: 1.2em;
   color: #42526e;
+}
+
+/*MEDIA QUERIES */
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+    padding: 2em;
+  }
+
+  header .menu-button,
+  h2 {
+    display: none;
+  }
+
+  header ul {
+    margin: 0 auto;
+    display: flex;
+    gap: 2em;
+  }
+
+  header ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    color: #344563;
+  }
+
+  .headline-section {
+    padding-top: 12em;
+    background-image: url(../images/Header-llustration-desktop.svg);
+    min-height: 100vh;
+  }
+
+  .headline-section h1 {
+    font-weight: 800;
+    font-size: 3em;
+  }
+
+  .headline-section .paragraph-text {
+    margin-top: 1em;
+  }
 }
