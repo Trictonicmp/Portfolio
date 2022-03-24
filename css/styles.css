@@ -364,6 +364,15 @@ footer .social-media-iconlist {
   background-repeat: no-repeat;
 }
 
+.contact-section form textarea:focus,
+.contact-section form textarea:hover,
+.contact-section form input[type="text"]:focus,
+.contact-section form input[type="text"]:hover,
+.contact-section form input[type="email"]:focus,
+.contact-section form input[type="email"]:hover {
+  border: 1px solid #36b37f;
+}
+
 .contact-section form button {
   max-width: 8em;
 }
