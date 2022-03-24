@@ -39,15 +39,16 @@ header ul {
 }
 
 .headline-section {
-  padding: 5em 3em 0 3em;
+  padding: 0 3em 0 3em;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
-  background-position: center top;
-  background-size: 100% auto;
+  background-position: center;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -76,7 +77,6 @@ header ul {
 }
 
 .social-media-iconlist {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -147,7 +147,6 @@ footer .social-media-iconlist {
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
-  max-width: 1300px;
   margin: 0 auto;
   padding: 0 1.5em;
 }
@@ -256,7 +255,7 @@ footer .social-media-iconlist {
   justify-content: center;
   grid-gap: 1.5em;
   width: 100%;
-  max-width: 1300px;
+
   padding: 0 1.5em;
 }
 
@@ -397,9 +396,7 @@ footer .social-media-iconlist {
   }
 
   .headline-section {
-    padding-top: 12em;
     background-image: url(../images/Header-llustration-desktop.svg);
-    min-height: 100vh;
   }
 
   .headline-section h1 {
@@ -465,6 +462,12 @@ footer .social-media-iconlist {
   .contact-section .social-media-iconlist,
   .contact-section .dev-email {
     display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .work-cards-container {
+    max-width: 1300px;
   }
 }
 
