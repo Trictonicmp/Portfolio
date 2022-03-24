@@ -44,6 +44,7 @@ header ul {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   background-image: url(../images/header-illsutration-mobile.svg);
   background-position: center top;
   background-size: 100% auto;
