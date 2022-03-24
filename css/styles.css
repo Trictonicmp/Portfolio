@@ -108,6 +108,15 @@ footer .social-media-iconlist {
   flex-direction: column;
 }
 
+.work-card img {
+  transition-property: transform;
+  transition-duration: .2s;
+}
+
+.work-card img:hover {
+  transform: scale(1.1);
+}
+
 .keep-reading-button {
   display: flex;
   justify-content: center;
