@@ -2,7 +2,9 @@
 
 # Web-Dev Portfolio
 
-> Web Dev portfolio to showcase coding skills and experience building websites. 
+>In this project I have added the desktop version to the portfolio following one of the templates of figma design. 
+>
+>Web Dev portfolio to showcase coding skills and experience building websites.
 
 ## Built With
 
