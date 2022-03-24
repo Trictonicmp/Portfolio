@@ -310,6 +310,7 @@ footer .social-media-iconlist {
 }
 
 .contact-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -366,6 +367,10 @@ footer .social-media-iconlist {
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
+  .main-body {
+    display: grid;
+  }
+
   header {
     position: fixed;
     left: 0;
