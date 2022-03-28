@@ -6,6 +6,10 @@
 >
 >Web Dev portfolio to showcase coding skills and experience building websites.
 
+## Link to My Portfolio
+
+[Go to My Portfolio](https://trictonicmp.github.io/Portfolio/)
+
 ## Built With
 
 - HTML, CSS
