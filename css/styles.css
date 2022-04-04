@@ -66,10 +66,37 @@ html {
   color: #3a4a42;
 }
 
+.knowledge-icon-container img {
+  width: 2.8em;
+}
+
+.social-media-iconlist img {
+  margin: 0.5em;
+}
+
 .popout .close-button {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.keep-reading-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.25em;
+  background-color: white;
+}
+
+.keep-reading-button img {
+  width: 65%;
 }
 
 .popout .close-button img {
@@ -131,38 +158,11 @@ footer .social-media-iconlist {
   margin-top: 3em;
 }
 
-.work-card img {
-  width: 100%;
-}
-
-.knowledge-icon-container img {
-  width: 2.8em;
-}
-
-.social-media-iconlist img {
-  margin: 0.5em;
-}
-
 .recent-work-section {
   margin-top: 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.keep-reading-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 3em;
-  width: 2.5em;
-  height: 2.5em;
-  border: 1px solid #dfe1e6;
-  border-radius: 1.25em;
-  background-color: white;
-}
-
-.keep-reading-button img {
-  width: 65%;
 }
 
 .section-headline {
