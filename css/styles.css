@@ -3,7 +3,7 @@ html {
   margin: 0 auto;
 }
 
-header {
+.header {
   width: 100%;
   position: sticky;
   top: 0;
@@ -13,18 +13,18 @@ header {
   align-items: center;
 }
 
-header h2 {
+.header h2 {
   font-weight: 600;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-header h2 a {
+.header h2 a {
   text-decoration: none;
   color: #28352f;
 }
 
-header .menu-button {
+.header .menu-button {
   width: 2em;
   height: 2em;
   background-color: transparent;
@@ -34,7 +34,76 @@ header .menu-button {
   border: none;
 }
 
-header ul {
+.header ul {
+  display: none;
+}
+
+.popout {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.popout h2,
+.popout .menu-button {
+  display: none;
+}
+
+.popout ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.popout ul li a {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 2em;
+  text-decoration: none;
+  color: #3a4a42;
+}
+
+.knowledge-icon-container img {
+  width: 2.8em;
+}
+
+.social-media-iconlist img {
+  margin: 0.5em;
+}
+
+.popout .close-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.keep-reading-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.25em;
+  background-color: white;
+}
+
+.keep-reading-button img {
+  width: 65%;
+}
+
+.popout .close-button img {
+  width: 2.5em;
+}
+
+.hidden {
   display: none;
 }
 
@@ -89,38 +158,11 @@ footer .social-media-iconlist {
   margin-top: 3em;
 }
 
-.work-card img {
-  width: 100%;
-}
-
-.knowledge-icon-container img {
-  width: 2.8em;
-}
-
-.social-media-iconlist img {
-  margin: 0.5em;
-}
-
 .recent-work-section {
   margin-top: 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.keep-reading-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 3em;
-  width: 2.5em;
-  height: 2.5em;
-  border: 1px solid #dfe1e6;
-  border-radius: 1.25em;
-  background-color: white;
-}
-
-.keep-reading-button img {
-  width: 65%;
 }
 
 .section-headline {
@@ -379,24 +421,24 @@ footer .social-media-iconlist {
     display: grid;
   }
 
-  header {
+  .header {
     position: fixed;
     left: 0;
     padding: 2em;
   }
 
-  header .menu-button,
-  header h2 {
+  .header .menu-button,
+  .header h2 {
     display: none;
   }
 
-  header ul {
+  .header ul {
     margin: 0 auto;
     display: flex;
     gap: 2em;
   }
 
-  header ul li a {
+  .header ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1em;
