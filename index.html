@@ -12,7 +12,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js"></script>
 </head>
 
 <body class="main-body">
@@ -73,7 +72,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -86,7 +85,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -99,7 +98,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -112,7 +111,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -125,7 +124,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -138,7 +137,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="#" class="green-button">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
         </div>
       </div>
     </div>
@@ -223,10 +222,10 @@
       </li>
     </ul>
   </section>
-  <section class="details-popout">
+  <section id="details-modal" class="details-popout hide-popout">
      <div class="inner-details">
       <div class="details-close-container">
-        <img src="images/icons/close-details.svg" alt="close">
+        <img src="images/icons/close-details.svg" alt="close" onclick=" toggleDetails()">
       </div>
       <div class="details-img-container">
         <img src="images/projects-screens/screen-1.png" alt="project-image">
@@ -238,7 +237,7 @@
           <ul>
             <li>Codekit</li>
             <li>Github</li>
-            <li>Javascript</li>
+            <li>Javascript</li> 
             <li>Bootstrap</li>
             <li>Terminal</li>
             <li>Code.io</li>
@@ -246,9 +245,9 @@
       </div>
       <div class="details-buttons">
         <a href="#" class="green-icon-button">See live <img src="images/icons/see-live.svg" alt="see live"></a>
-        <a href="#" class="green-icon-button">See live <img src="images/icons/white-github.svg" alt="GitHub"></a>
+        <a href="#" class="green-icon-button">See source <img src="images/icons/white-github.svg" alt="GitHub"></a>
       </div>
-      <div>
+      <div class="details-details">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde facere minus sed perferendis, perspiciatis qui id provident quam dolore iusto, repellendus aperiam iure natus corrupti suscipit facilis! Fugit, at vel.
           Quidem facilis ab necessitatibus rerum iusto ea? Facere, aut rerum officia hic quibusdam minus nam? Fuga sequi, minima debitis at velit id blanditiis porro cumque et delectus saepe aut magnam.
@@ -276,6 +275,6 @@
     </ul>
     <p class="dev-email">myemailhere@email.com</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
