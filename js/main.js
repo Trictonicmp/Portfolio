@@ -122,6 +122,49 @@ function createWorkCards() {
   }
 }
 
+function validateFormFields(form) {
+  let isValidated = true;
+  const requiredElements = form.querySelectorAll('[required]');
+  for (let i = 0; i < requiredElements.length; i += 1) {
+    if (requiredElements[i].reportValidity()) {
+      isValidated = true;
+    } else {
+      isValidated = false;
+      break;
+    }
+  }
+  return isValidated;
+}
+
+function isLowercase(str) {
+  let thisIsLowerCase = false;
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i].toLowerCase() === str[i]) {
+      thisIsLowerCase = true;
+    } else {
+      thisIsLowerCase = false;
+      break;
+    }
+  }
+
+  return thisIsLowerCase;
+}
+
+function validateForm() {
+  const emailFieldText = document.getElementById('main-form')[1].value;
+  const form = document.getElementById('main-form');
+  validateFormFields(form);
+  if (validateFormFields(form)) {
+    if (isLowercase(emailFieldText)) {
+      form.submit();
+    } else {
+      alert('Your email should be lowercase');
+    }
+  }
+}
+
+document.getElementById('form-button').addEventListener('click', validateForm);
+
 createWorkCards();
 openNav();
 closeNav();
