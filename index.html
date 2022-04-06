@@ -12,7 +12,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js"></script>
 </head>
 
 <body class="main-body">
@@ -62,85 +61,7 @@
   </section>
   <section class="recent-work-section" id="Portfolio">
     <h2 class="section-headline">My Recent Works</h2>
-    <div class="work-cards-container">
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
-      <div class="work-card">
-        <img src="images/projects-screens/app_screenshot.png" alt="project screenshot" />
-        <div class="work-card-info">
-          <h3>Multi-Post Stories Gain+Glory</h3>
-          <ul>
-            <li>Rubi on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <a href="#" class="green-button">See Project</a>
-        </div>
-      </div>
+    <div id="work-cards-container-element" class="work-cards-container">
     </div>
   </section>
   <section class="about-me-section" id="About">
@@ -223,6 +144,39 @@
       </li>
     </ul>
   </section>
+  <section id="details-modal" class="details-popout hide-popout">
+     <div class="inner-details">
+      <div class="details-close-container">
+        <img src="images/icons/close-details.svg" alt="close" onclick=" toggleDetails()">
+      </div>
+      <div class="details-img-container">
+        <img id="detailsImg" src="images/projects-screens/screen-1.png" alt="project-image">
+      </div>
+      <div class="details-header">
+        <h2 id="detailsTitle">
+          Keeping track of hundreds of components
+        </h2>
+          <ul id="detailsTags">
+            <li>Codekit</li>
+            <li>Github</li>
+            <li>Javascript</li> 
+            <li>Bootstrap</li>
+            <li>Terminal</li>
+            <li>Code.io</li>
+          </ul>
+      </div>
+      <div class="details-buttons">
+        <a id="detailsLiveP" href="#" class="green-icon-button">See live <img src="images/icons/see-live.svg" alt="see live"></a>
+        <a id="detailsSource" href="#" class="green-icon-button">See source <img src="images/icons/white-github.svg" alt="GitHub"></a>
+      </div>
+      <div class="details-details">
+        <p id="detailsDescription">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde facere minus sed perferendis, perspiciatis qui id provident quam dolore iusto, repellendus aperiam iure natus corrupti suscipit facilis! Fugit, at vel.
+          Quidem facilis ab necessitatibus rerum iusto ea? Facere, aut rerum officia hic quibusdam minus nam? Fuga sequi, minima debitis at velit id blanditiis porro cumque et delectus saepe aut magnam.
+        </p>
+      </div>
+    </div>
+  </section>
   <footer>
     <ul class="social-media-iconlist">
       <li>
@@ -243,6 +197,6 @@
     </ul>
     <p class="dev-email">myemailhere@email.com</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
