@@ -214,6 +214,8 @@ footer .social-media-iconlist {
   background-color: white;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
+  align-self: flex-end;
+  flex-grow: 1;
 }
 
 .work-card-info h3 {
@@ -232,9 +234,12 @@ footer .social-media-iconlist {
 .work-card-info ul {
   margin: 1em 0;
   display: flex;
+  flex-grow: 1;
   gap: 0.4em;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .work-card-info ul li {
