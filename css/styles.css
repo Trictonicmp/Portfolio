@@ -417,6 +417,112 @@ footer .social-media-iconlist {
   color: #42526e;
 }
 
+.details-popout {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(193, 199, 208, 0.9);
+}
+
+.details-popout .inner-details {
+  position: absolute;
+  width: calc(100% - 3em);
+  height: calc(100vh - 3em);
+  max-width: 42em;
+  padding: 1.3em;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.inner-details .details-close-container {
+  width: 100%;
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inner-details .details-close-container img {
+  height: 2em;
+  cursor: pointer;    
+}
+
+.inner-details .details-img-container {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+.inner-details .details-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-details .details-header {
+  width: 100%;
+}
+
+.details-header h2 {
+  font-weight: 700;
+}
+
+.details-header ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.details-header ul li {
+  font-size: 0.7em;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  background-color: #ebecf0;
+}
+
+.inner-details .details-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  gap: 0.6em;
+}
+
+.inner-details .details-details {
+  color: #344563;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+}
+
+.green-icon-button {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.3em;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.5em;
+  background-color: #36b37e;
+}
+
+.green-icon-button img {
+  width: 1.5em;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .main-body {
@@ -530,7 +636,7 @@ footer .social-media-iconlist {
     position: absolute;
     width: calc(100% - 3em);
     /*height: calc(100vh - 3em);*/
-    max-height: 70em;
+    max-height: 60em;
     max-width: 42em;
     padding: 1.3em;
     display: flex;
@@ -594,6 +700,7 @@ footer .social-media-iconlist {
     gap: 0.6em;
     justify-content: end;
     align-items: flex-start;
+    order: 0;
   }
 
   .inner-details .details-details {

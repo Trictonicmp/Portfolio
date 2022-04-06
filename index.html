@@ -72,7 +72,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project1')">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -85,7 +85,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project2')">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -98,7 +98,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project3')">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -111,7 +111,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project4')">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -124,7 +124,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project5')">See Project</a>
         </div>
       </div>
       <div class="work-card">
@@ -137,7 +137,7 @@
             <li>JavaScript</li>
             <li>html</li>
           </ul>
-          <a href="" class="green-button" onclick="toggleDetails(1)">See Project</a>
+          <a href="" class="green-button" onclick="toggleDetails('Project6')">See Project</a>
         </div>
       </div>
     </div>
@@ -228,13 +228,13 @@
         <img src="images/icons/close-details.svg" alt="close" onclick=" toggleDetails()">
       </div>
       <div class="details-img-container">
-        <img src="images/projects-screens/screen-1.png" alt="project-image">
+        <img id="detailsImg" src="images/projects-screens/screen-1.png" alt="project-image">
       </div>
       <div class="details-header">
-        <h2>
+        <h2 id="detailsTitle">
           Keeping track of hundreds of components
         </h2>
-          <ul>
+          <ul id="detailsTags">
             <li>Codekit</li>
             <li>Github</li>
             <li>Javascript</li> 
@@ -244,11 +244,11 @@
           </ul>
       </div>
       <div class="details-buttons">
-        <a href="#" class="green-icon-button">See live <img src="images/icons/see-live.svg" alt="see live"></a>
-        <a href="#" class="green-icon-button">See source <img src="images/icons/white-github.svg" alt="GitHub"></a>
+        <a id="detailsLiveP" href="#" class="green-icon-button">See live <img src="images/icons/see-live.svg" alt="see live"></a>
+        <a id="detailsSource" href="#" class="green-icon-button">See source <img src="images/icons/white-github.svg" alt="GitHub"></a>
       </div>
       <div class="details-details">
-        <p>
+        <p id="detailsDescription">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde facere minus sed perferendis, perspiciatis qui id provident quam dolore iusto, repellendus aperiam iure natus corrupti suscipit facilis! Fugit, at vel.
           Quidem facilis ab necessitatibus rerum iusto ea? Facere, aut rerum officia hic quibusdam minus nam? Fuga sequi, minima debitis at velit id blanditiis porro cumque et delectus saepe aut magnam.
         </p>
