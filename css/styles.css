@@ -218,6 +218,11 @@ footer .social-media-iconlist {
   color: #3a4a42;
   text-align: center;
   font-size: 1.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 
 .work-card-info ul {

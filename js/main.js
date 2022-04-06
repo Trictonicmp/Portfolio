@@ -1,5 +1,5 @@
-const projectsDetails = {
-  Project1: {
+const projectsDetails = [
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components',
@@ -8,7 +8,7 @@ const projectsDetails = {
     PreviewLink: 'http://preview.com',
     SourceLink: 'http://sourcelink.com',
   },
-  Project2: {
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components x2',
@@ -17,7 +17,7 @@ const projectsDetails = {
     PreviewLink: 'http://preview2.com',
     SourceLink: 'http://sourcelink2.com',
   },
-  Project3: {
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components x3',
@@ -26,7 +26,7 @@ const projectsDetails = {
     PreviewLink: 'http://preview3.com',
     SourceLink: 'http://sourcelink3.com',
   },
-  Project4: {
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components x4',
@@ -35,7 +35,7 @@ const projectsDetails = {
     PreviewLink: 'http://preview4.com',
     SourceLink: 'http://sourcelink4.com',
   },
-  Project5: {
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components x5',
@@ -44,7 +44,7 @@ const projectsDetails = {
     PreviewLink: 'http://preview5.com',
     SourceLink: 'http://sourcelink5.com',
   },
-  Project6: {
+  {
     ScreenshotUrl: 'images/projects-screens/screen-1.png',
     ScreenshotAlt: 'Project image',
     Headline: 'Keepin track of hundreds of components x6',
@@ -52,8 +52,8 @@ const projectsDetails = {
     Description: 'sed perferendis, perspiciatis qui id provident quam dolore iusto, repellendus aperiam iure natus corruti suscipit facilis! Fugit, at vel. Quidem facilis ab necessitatibus rerum iusto ea? Facere, aut rerum officia hic quibusdam minus nam? Fuga sequi, minima debitis at velit id blanditiis porro cumque et delectus saepe aut magnam.',
     PreviewLink: 'http://preview6.com',
     SourceLink: 'http://sourcelink6.com',
-  },
-};
+  }
+];
 
 function openNav() {
   const mainHeader = document.getElementById('main-header');
@@ -68,6 +68,39 @@ function closeNav() {
   mainHeader.classList.remove('popout');
   closeButton.classList.add('hidden');
 }
+
+function createWorkCards() {
+  for(let i = 0; i < projectsDetails.length; i = i + 1) {
+    let workCard = document.createElement('div');
+    workCard.classList.add('work-card');
+    let workCardImg = document.createElement('img');
+    workCardImg.src = projectsDetails[i].ScreenshotUrl;
+    workCardImg.alt = projectsDetails[i].ScreenshotAlt;
+    workCard.appendChild(workCardImg);
+    let workCardInfo = document.createElement('div');
+    workCardInfo.classList.add('work-card-info');
+    let workCardTitle = document.createElement('h3');
+    workCardTitle.innerText = projectsDetails[i].Headline;
+    workCardInfo.appendChild(workCardTitle);
+    let workCardUl = document.createElement('ul');
+    for(let j = 0; j < projectsDetails[i].Tags.length; j = j + 1) {
+      let li = document.createElement('li');
+      li.innerText = projectsDetails[i].Tags[j];
+      workCardUl.appendChild(li);
+    }
+    workCardInfo.appendChild(workCardUl);
+    let workCardButton = document.createElement('button');
+    workCardButton.type = 'button';
+    workCardButton.classList.add('green-button');
+    workCardButton.innerHTML = 'See Project';
+    workCardButton.onclick = function() {toggleDetails(i)};
+    workCardInfo.appendChild(workCardButton);
+    workCard.appendChild(workCardInfo);
+    document.getElementById('work-cards-container-element').appendChild(workCard);
+  }
+}
+
+createWorkCards();
 
 function toggleDetails(projectId) {
   if (projectId !== null && projectId !== undefined) {
