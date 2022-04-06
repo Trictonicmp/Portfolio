@@ -539,7 +539,7 @@ footer .social-media-iconlist {
 
 .inner-details .details-details {
   color: #344563;
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin-top: 1.5em;
   font-size: 0.8em;
 }
@@ -672,7 +672,7 @@ footer .social-media-iconlist {
   }
 
   .inner-details .details-details {
-    margin-bottom: 1.2em;
+    line-height: 2em;
   }
 
   .green-icon-button {
