@@ -462,6 +462,7 @@ footer .social-media-iconlist {
   border-radius: 0.7em;
   background-color: white;
   justify-items: flex-start;
+  overflow-y: auto;
 }
 
 .inner-details .details-close-container {
@@ -471,6 +472,8 @@ footer .social-media-iconlist {
   justify-content: end;
   align-items: center;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
 }
 
 .inner-details .details-close-container img {
@@ -481,6 +484,7 @@ footer .social-media-iconlist {
 
 .inner-details .details-img-container {
   width: 100%;
+  min-height: 180px;
   border-radius: 0.5em;
   margin-bottom: 1.5em;
   overflow: hidden;
@@ -641,12 +645,6 @@ footer .social-media-iconlist {
     padding: 1.3em;
     flex-wrap: wrap;
     flex-direction: row;
-    overflow-y: auto;
-  }
-
-  .details-close-container {
-    position: sticky;
-    top: 0;
   }
 
   .inner-details .details-img-container {
