@@ -663,32 +663,17 @@ footer .social-media-iconlist {
 
   .inner-details .details-buttons {
     flex: 1 1 35%;
-    display: flex;
-    justify-content: end;
     align-items: flex-start;
     margin-top: 0;
     order: 0;
   }
 
   .inner-details .details-details {
-    color: #344563;
-    line-height: 1.5em;
-    margin-top: 1.5em;
     margin-bottom: 1.2em;
   }
 
   .green-icon-button {
-    display: flex;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    padding: 0.7em;
     font-size: 0.8em;
-    text-decoration: none;
-    color: white;
-    border-radius: 0.5em;
-    background-color: #36b37e;
   }
 }
 
