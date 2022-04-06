@@ -122,19 +122,6 @@ function createWorkCards() {
   }
 }
 
-function validateForm() {
-  const emailFieldText = document.getElementById('main-form')[1].value;
-  const form = document.getElementById('main-form');
-  validateFormFields(form);
-  if (validateFormFields(form)) {
-    if (isLowercase(emailFieldText)) {
-      form.submit();
-    } else {
-      alert('Your email should be lowercase');
-    }
-  }
-}
-
 function validateFormFields(form) {
   let isValidated = true;
   const requiredElements = form.querySelectorAll('[required]');
@@ -151,8 +138,8 @@ function validateFormFields(form) {
 
 function isLowercase(str) {
   let thisIsLowerCase = false;
-  for (const char in str) {
-    if (str[char].toLowerCase() === str[char]) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i].toLowerCase() === str[i]) {
       thisIsLowerCase = true;
     } else {
       thisIsLowerCase = false;
@@ -162,6 +149,21 @@ function isLowercase(str) {
 
   return thisIsLowerCase;
 }
+
+function validateForm() {
+  const emailFieldText = document.getElementById('main-form')[1].value;
+  const form = document.getElementById('main-form');
+  validateFormFields(form);
+  if (validateFormFields(form)) {
+    if (isLowercase(emailFieldText)) {
+      form.submit();
+    } else {
+      alert('Your email should be lowercase');
+    }
+  }
+}
+
+document.getElementById('form-button').addEventListener('click', validateForm);
 
 createWorkCards();
 openNav();
