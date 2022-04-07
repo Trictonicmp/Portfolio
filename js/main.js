@@ -71,54 +71,60 @@ function closeNav() {
 
 function toggleDetails(projectId) {
   if (projectId !== null && projectId !== undefined) {
+    const project = projectsDetails[projectId];
     const detailsImg = document.getElementById('detailsImg');
-    detailsImg.src = projectsDetails[projectId].ScreenshotUrl;
-    detailsImg.alt = projectsDetails[projectId].ScreenshotAlt;
-    document.getElementById('detailsTitle').innerHTML = projectsDetails[projectId].Headline;
-    const detailsTags = document.getElementById('detailsTags');
+    detailsImg.src = project.ScreenshotUrl;
+    detailsImg.alt = project.ScreenshotAlt;
+    document.getElementById('detailsTitle').innerHTML = project.Headline;
+    const detailsTagsContainer = document.getElementById('detailsTags');
     detailsTags.innerHTML = '';
-    for (let i = 0; i < projectsDetails[projectId].Tags.length; i += 1) {
-      const li = document.createElement('li');
-      li.innerHTML = projectsDetails[projectId].Tags[i];
-      detailsTags.appendChild(li);
+    for (let i = 0; i < project.Tags.length; i += 1) {
+      const tag = document.createElement('li');
+      tag.innerHTML = project.Tags[i];
+      detailsTagsContainer.appendChild(tag);
     }
-    document.getElementById('detailsLiveP').href = projectsDetails[projectId].PreviewLink;
-    document.getElementById('detailsSource').href = projectsDetails[projectId].SourceLink;
-    document.getElementById('detailsDescription').innerHTML = projectsDetails[projectId].Description;
+    document.getElementById('detailsLiveP').href = project.PreviewLink;
+    document.getElementById('detailsSource').href = project.SourceLink;
+    document.getElementById('detailsDescription').innerHTML = project.Description;
   }
 
-  const detailsModal = document.getElementById('details-modal');
-  detailsModal.classList.toggle('hide-popout');
+  document.getElementById('details-modal').classList.toggle('hide-popout');
+}
+
+function createCardOf(project, index) {
+  const workCard = document.createElement('div');
+  workCard.classList.add('work-card');
+  const workCardImg = document.createElement('img');
+  workCardImg.src = project.ScreenshotUrl;
+  workCardImg.alt = project.ScreenshotAlt;
+  workCard.appendChild(workCardImg);
+  const workCardInfo = document.createElement('div');
+  workCardInfo.classList.add('work-card-info');
+  const workCardTitle = document.createElement('h3');
+  workCardTitle.innerText = project.Headline;
+  workCardInfo.appendChild(workCardTitle);
+  const workCardTagsContainer = document.createElement('ul');
+  for (let j = 0; j < project.Tags.length; j += 1) {
+    const tag = document.createElement('li');
+    tag.innerText = project.Tags[j];
+    workCardTagsContainer.appendChild(tag);
+  }
+  workCardInfo.appendChild(workCardTagsContainer);
+  const workCardButton = document.createElement('button');
+  workCardButton.type = 'button';
+  workCardButton.classList.add('green-button');
+  workCardButton.innerHTML = 'See Project';
+  workCardButton.onclick = function openDetails() { toggleDetails(index); };
+  workCardInfo.appendChild(workCardButton);
+  workCard.appendChild(workCardInfo);
+  
+  return workCard;
 }
 
 function createWorkCards() {
   for (let i = 0; i < projectsDetails.length; i += 1) {
-    const workCard = document.createElement('div');
-    workCard.classList.add('work-card');
-    const workCardImg = document.createElement('img');
-    workCardImg.src = projectsDetails[i].ScreenshotUrl;
-    workCardImg.alt = projectsDetails[i].ScreenshotAlt;
-    workCard.appendChild(workCardImg);
-    const workCardInfo = document.createElement('div');
-    workCardInfo.classList.add('work-card-info');
-    const workCardTitle = document.createElement('h3');
-    workCardTitle.innerText = projectsDetails[i].Headline;
-    workCardInfo.appendChild(workCardTitle);
-    const workCardUl = document.createElement('ul');
-    for (let j = 0; j < projectsDetails[i].Tags.length; j += 1) {
-      const li = document.createElement('li');
-      li.innerText = projectsDetails[i].Tags[j];
-      workCardUl.appendChild(li);
-    }
-    workCardInfo.appendChild(workCardUl);
-    const workCardButton = document.createElement('button');
-    workCardButton.type = 'button';
-    workCardButton.classList.add('green-button');
-    workCardButton.innerHTML = 'See Project';
-    workCardButton.onclick = function openDetails() { toggleDetails(i); };
-    workCardInfo.appendChild(workCardButton);
-    workCard.appendChild(workCardInfo);
-    document.getElementById('work-cards-container-element').appendChild(workCard);
+    let workCardsContainer = document.getElementById('work-cards-container-element');
+    workCardsContainer.appendChild(createCardOf(projectsDetails[i], i));
   }
 }
 
@@ -126,9 +132,7 @@ function validateFormFields(form) {
   let isValidated = true;
   const requiredElements = form.querySelectorAll('[required]');
   for (let i = 0; i < requiredElements.length; i += 1) {
-    if (requiredElements[i].reportValidity()) {
-      isValidated = true;
-    } else {
+    if (!requiredElements[i].reportValidity()) {
       isValidated = false;
       break;
     }
@@ -137,28 +141,20 @@ function validateFormFields(form) {
 }
 
 function isLowercase(str) {
-  let thisIsLowerCase = false;
-  for (let i = 0; i < str.length; i += 1) {
-    if (str[i].toLowerCase() === str[i]) {
-      thisIsLowerCase = true;
-    } else {
-      thisIsLowerCase = false;
-      break;
-    }
-  }
-
-  return thisIsLowerCase;
+  return str.toLowerCase() === str;
 }
 
 function validateForm() {
-  const emailFieldText = document.getElementById('main-form')[1].value;
+  const emailField = document.getElementById('main-form')[1];
+  const emailFieldText = emailField.value;
   const form = document.getElementById('main-form');
   validateFormFields(form);
   if (validateFormFields(form)) {
     if (isLowercase(emailFieldText)) {
       form.submit();
     } else {
-      alert('Your email should be lowercase');
+      emailField.setCustomValidity('Your email should be lowercase');
+      emailField.reportValidity();
     }
   }
 }
