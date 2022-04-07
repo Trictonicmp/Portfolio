@@ -77,7 +77,7 @@ function toggleDetails(projectId) {
     detailsImg.alt = project.ScreenshotAlt;
     document.getElementById('detailsTitle').innerHTML = project.Headline;
     const detailsTagsContainer = document.getElementById('detailsTags');
-    detailsTags.innerHTML = '';
+    detailsTagsContainer.innerHTML = '';
     for (let i = 0; i < project.Tags.length; i += 1) {
       const tag = document.createElement('li');
       tag.innerHTML = project.Tags[i];
@@ -117,13 +117,13 @@ function createCardOf(project, index) {
   workCardButton.onclick = function openDetails() { toggleDetails(index); };
   workCardInfo.appendChild(workCardButton);
   workCard.appendChild(workCardInfo);
-  
+
   return workCard;
 }
 
 function createWorkCards() {
   for (let i = 0; i < projectsDetails.length; i += 1) {
-    let workCardsContainer = document.getElementById('work-cards-container-element');
+    const workCardsContainer = document.getElementById('work-cards-container-element');
     workCardsContainer.appendChild(createCardOf(projectsDetails[i], i));
   }
 }
