@@ -161,26 +161,25 @@ function validateForm() {
 
 document.getElementById('form-button').addEventListener('click', validateForm);
 
-let userData = {
+const userData = {
   name: '',
   email: '',
-  message: ''
-}
+  message: '',
+};
 
-let nameField = document.getElementById('main-form')[0];
-let emailField = document.getElementById('main-form')[1];
-let messageField = document.getElementById('main-form')[2];
+const nameField = document.getElementById('main-form')[0];
+const emailField = document.getElementById('main-form')[1];
+const messageField = document.getElementById('main-form')[2];
 
 function checkLocalStorage() {
-  //console.log(localStorage)
-  if(localStorage.getItem('userData') !== null) {
-    let userData = JSON.parse(localStorage.getItem('userData'));
+  // console.log(localStorage)
+  if (localStorage.getItem('userData') !== null) {
+    const userData = JSON.parse(localStorage.getItem('userData'));
     nameField.value = userData.name;
     emailField.value = userData.email;
     messageField.value = userData.message;
-  }
-  else {
-    let userDataStr = JSON.stringify(userData);
+  } else {
+    const userDataStr = JSON.stringify(userData);
     localStorage.setItem('userData', userDataStr);
   }
 }
