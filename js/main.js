@@ -161,6 +161,43 @@ function validateForm() {
 
 document.getElementById('form-button').addEventListener('click', validateForm);
 
+let userData = {
+  name: '',
+  email: '',
+  message: ''
+}
+
+let nameField = document.getElementById('main-form')[0];
+let emailField = document.getElementById('main-form')[1];
+let messageField = document.getElementById('main-form')[2];
+
+function checkLocalStorage() {
+  //console.log(localStorage)
+  if(localStorage.getItem('userData') !== null) {
+    let userData = JSON.parse(localStorage.getItem('userData'));
+    nameField.value = userData.name;
+    emailField.value = userData.email;
+    messageField.value = userData.message;
+  }
+  else {
+    let userDataStr = JSON.stringify(userData);
+    localStorage.setItem('userData', userDataStr);
+  }
+}
+
+function updateUserData() {
+  userData.name = nameField.value;
+  userData.email = emailField.value;
+  userData.message = messageField.value;
+  localStorage.setItem('userData', JSON.stringify(userData));
+}
+
+nameField.oninput = function upData() { updateUserData(); };
+emailField.oninput = function upData() { updateUserData(); };
+messageField.oninput = function upData() { updateUserData(); };
+
+checkLocalStorage();
+
 createWorkCards();
 openNav();
 closeNav();
