@@ -185,9 +185,9 @@ function checkLocalStorage() {
 }
 
 function updateUserData() {
-  userData.name = nameField.value;
-  userData.email = emailField.value;
-  userData.message = messageField.value;
+  userData.userName = nameField.value;
+  userData.userEmail = emailField.value;
+  userData.userMessage = messageField.value;
   localStorage.setItem('userData', JSON.stringify(userData));
 }
 
