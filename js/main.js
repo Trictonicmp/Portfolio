@@ -128,6 +128,10 @@ function createWorkCards() {
   }
 }
 
+const nameField = document.getElementById('main-form')[0];
+const emailField = document.getElementById('main-form')[1];
+const messageField = document.getElementById('main-form')[2];
+
 function validateFormFields(form) {
   let isValidated = true;
   const requiredElements = form.querySelectorAll('[required]');
@@ -144,18 +148,20 @@ function isLowercase(str) {
   return str.toLowerCase() === str;
 }
 
+function validateLowerCase() {
+  if (isLowercase(emailField.value)) {
+    emailField.setCustomValidity('');
+  } else {
+    emailField.setCustomValidity('Your email should be lowercase');
+  }
+}
+
+emailField.addEventListener('change', validateLowerCase);
+
 function validateForm() {
-  const emailField = document.getElementById('main-form')[1];
-  const emailFieldText = emailField.value;
   const form = document.getElementById('main-form');
-  validateFormFields(form);
   if (validateFormFields(form)) {
-    if (isLowercase(emailFieldText)) {
-      form.submit();
-    } else {
-      emailField.setCustomValidity('Your email should be lowercase');
-      emailField.reportValidity();
-    }
+    form.submit();
   }
 }
 
@@ -166,10 +172,6 @@ const userData = {
   email: '',
   message: '',
 };
-
-const nameField = document.getElementById('main-form')[0];
-const emailField = document.getElementById('main-form')[1];
-const messageField = document.getElementById('main-form')[2];
 
 function checkLocalStorage() {
   // console.log(localStorage)
